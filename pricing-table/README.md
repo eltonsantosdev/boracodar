@@ -6,11 +6,8 @@ https://www.rocketseat.com.br/boracodar
 
 Desenvolver um componente pricing table.
 
-## Tecnologias
+## Tecnologias que foram usadas na construção do projeto:
 
-As seguintes ferramentas foram usadas na construção do projeto:
-
-- [PHP](https://www.php.net/)
-- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+- [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-- [Bootstrap](https://getbootstrap.com/)
+- [Bootstrap Icons](https://icons.getbootstrap.com/)
