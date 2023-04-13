@@ -1,2 +1,3 @@
-#Desafio #15 - um pricing table
+# Desafio #15 - Pricing table
+
 Desenvolver um componente pricing table.
