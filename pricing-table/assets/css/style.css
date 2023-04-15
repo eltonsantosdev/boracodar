@@ -2,12 +2,17 @@
   --white: #ffffff;
   --purple-100: #996DFF;
   --purple-200: #7C3AED;
+  --pink-lady-100: #fff4d8;
   --green-200: #1B873F;
   --gray-50: #F8FAFC;
   --gray-200: #E2E8F0;
   --gray-600: #475569;
   --gray-800: #1E293B;
-  --gray-900: #0F172A;
+  --gray-900: #0a192f;
+  --blue-600: #1977f3;
+  --yellow-sea-500: #ffa408;
+  --aquamarine-300: #64fadb;
+  --aquamarine-400: #1be6c3;
 }
 
 * {
@@ -25,6 +30,7 @@ body {
   flex-direction: column;
   height: 100%;
   background-color: var(--gray-50);
+  background-image: linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 1) 85%), radial-gradient(ellipse at top left, rgba(13, 110, 253, 0.5), transparent 50%), radial-gradient(ellipse at top right, rgba(255, 228, 132, 0.5), transparent 50%), radial-gradient(ellipse at center right, rgba(112, 44, 249, 0.5), transparent 50%), radial-gradient(ellipse at center left, rgba(214, 51, 132, 0.5), transparent 50%);
 }
 
 main {
@@ -97,24 +103,40 @@ main {
   min-width: 0;
   min-height: 460px;
   word-wrap: break-word;
-  background-color: var(--white);
   background-clip: border-box;
-  border: 1px solid var(--gray-200);
   border-radius: 0.625rem;
 }
-.card:hover{
-  border: 1px solid var(--purple-100) !important;
+
+.card-essentials{
+  border: 1px solid var(--pink-lady-100);
+  background-color: var(--pink-lady-100);
+}
+.card-essentials:hover{
+  border: 1px solid var(--yellow-sea-500) !important;
+}
+.card-ultimate{
+  border: 1px solid var(--gray-900);
+  background-color: var(--gray-900);
+}
+.card-enterprise{
+  border: 1px solid var(--gray-200);
+  background-color: var(--white);
+}
+.card-enterprise:hover{
+  border: 1px solid var(--blue-600);
 }
 .card-body {
   flex: 1 1 auto;
 }
 
 .card-body h5 {
-  color: var(--purple-200);
+  color: var(--white);
   font-weight: 600;
   font-size: 14px !important;
 }
-
+.card-enterprise .card-body h5 {
+  color: var(--blue-600);
+}
 .card-body .card-title {
   font-style: normal;
   font-weight: 700;
@@ -139,18 +161,24 @@ main {
 .card-pricing small:last-child {
   font-weight: 700;
 }
-.card-ultimate{
-  border: 1px solid var(--gray-900) !important;
-  background-color: var(--gray-900);
+
+.card-essentials .card-body h5{
+  color: var(--yellow-sea-500);
 }
-.card-ultimate .card-title,
+.card-essentials .card-title,
+.card-essentials .card-pricing,
+.card-essentials .card-pricing small {
+  color: var(--gray-900);
+}
+
+.card-ultimate .card-title{
+  color: var(--aquamarine-300);
+}
 .card-ultimate .card-pricing,
 .card-ultimate .card-pricing small {
-  color: var(--gray-50);
+  color: var(--aquamarine-300);
 }
-.card-ultimate .btn {
-  color: var(--white);
-}
+
 .btn {
   display: flex;
   flex-direction: row;
@@ -170,13 +198,23 @@ main {
   color: var(--white);
   background-color: var(--gray-800);
 }
-.btn-primary{
-  border: 1px solid var(--purple-100);
-  background-color: var(--purple-100);
+.card-essentials .card-body .btn-outline{
+  border: 1px solid var(--yellow-sea-500);
 }
-.btn-primary:hover{
-  border: 1px solid var(--purple-200);
-  background-color: var(--purple-200);
+.card-essentials .card-body .btn-outline:hover{
+  background-color: var(--yellow-sea-500);
+  color: var(--gray-900);
+}
+
+.btn-primary {
+  color: var(--aquamarine-300);
+  border: 1px solid var(--aquamarine-300);
+  background-color: transparent ;
+}
+.btn-primary:hover {
+  color: var(--gray-900);
+  border: 1px solid var(--aquamarine-400);
+  background-color: var(--aquamarine-400);
 }
 .list-unstyled {
   width: 100%;
@@ -191,21 +229,29 @@ ul li{
   column-gap: 0.5rem;
   color: var(--gray-600);
 }
-ul li .li-text,
+.card-essentials .card-body ul li i{
+  color: var(--yellow-sea-500);
+}
+.card-ultimate .card-body ul li i{
+  color: var(--aquamarine-300);
+}
+.card-ultimate .card-body ul li .li-text {
+  color: var(--gray-50);
+}
+
+ul li .li-text{
+  color: var(--gray-900) ; 
+}
 ul li .li-help i,
 .card-ultimate hr{
   color: var(--gray-600); 
 }
-.card-ultimate ul li .li-text {
-  color: var(--gray-50);
-}
+
 ul li i{
-  color: var(--green-200);
+  color: var(--blue-600);
   font-size: 20px;
 }
-ul li .bi::before{
-  font-weight: 600 !important;
-}
+
 .ms-auto{
   margin-left: auto;
 }
@@ -274,7 +320,6 @@ hr {
   border-bottom: 3px solid transparent;
   border-top: 3px solid #1e5799;
 }
-
 @media (max-width: 280px) {
   .flex-direction{
     flex-direction: column;
