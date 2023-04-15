@@ -296,6 +296,10 @@ hr {
   top: 33px;
   right: -25px;
 }
+.card-ultimate:hover .ribbon span{
+  background: linear-gradient(var(--aquamarine-400) 0%, var(--aquamarine-300) 100%);
+  color: var(--gray-900)
+}
 
 .ribbon span::before {
   content: '';
@@ -308,7 +312,10 @@ hr {
   border-bottom: 3px solid transparent;
   border-top: 3px solid #1e5799;
 }
-
+.card-ultimate:hover .ribbon span::before{
+  border-left: 3px solid var(--aquamarine-400);
+  border-top: 3px solid var(--aquamarine-400);
+}
 .ribbon span::after {
   content: '';
   position: absolute;
@@ -319,6 +326,10 @@ hr {
   border-left: 3px solid transparent;
   border-bottom: 3px solid transparent;
   border-top: 3px solid #1e5799;
+}
+.card-ultimate:hover .ribbon span::after{
+  border-right: 3px solid var(--aquamarine-400);
+  border-top: 3px solid var(--aquamarine-400);
 }
 @media (max-width: 280px) {
   .flex-direction{
