@@ -10,4 +10,5 @@ Desenvolver um componente pricing table.
 
 - [HTML](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 - [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+- [Javascript](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 - [Bootstrap Icons](https://icons.getbootstrap.com/)
